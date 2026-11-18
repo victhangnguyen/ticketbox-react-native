@@ -1,13 +1,14 @@
 // Path: App.js (TicketBox - React Native)
 import { ScrollView } from "react-native";
-import EventSearchScreen from "./screens/EventSearchScreen";
 import EventListScreen from "./screens/EventListScreen";
+import EventSearchScreen from "./screens/EventSearchScreen";
 import EventDetailScreen from "./screens/EventDetailScreen";
-import CreateEventScreen from "./screens/CreateEventScreen";
-import BatchCreateEventsScreen from "./screens/BatchCreateEventsScreen";
 import EventEditScreen from "./screens/EventEditScreen";
 import BulkPriceScreen from "./screens/BulkPriceScreen";
 import EventDeleteScreen from "./screens/EventDeleteScreen";
+import BulkDeleteScreen from "./screens/BulkDeleteScreen";
+import CreateEventScreen from "./screens/CreateEventScreen";
+import BatchCreateEventsScreen from "./screens/BatchCreateEventsScreen";
 
 export default function App() {
   return (
@@ -23,6 +24,8 @@ export default function App() {
       <BulkPriceScreen />
       {/* C03L09-02 Xóa Sự Kiện Từ Ứng Dụng React Native Qua DELETE /api/events/{id} */}
       <EventDeleteScreen />
+      {/* C03L09-03 Xóa Hàng Loạt Sự Kiện Theo Nhà Tổ Chức Bằng JPQL DELETE */}
+      <BulkDeleteScreen />
       <CreateEventScreen />
       <BatchCreateEventsScreen />
     </ScrollView>
