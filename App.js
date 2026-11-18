@@ -7,7 +7,7 @@ import CreateEventScreen from "./screens/CreateEventScreen";
 import BatchCreateEventsScreen from "./screens/BatchCreateEventsScreen";
 import EventEditScreen from "./screens/EventEditScreen";
 import BulkPriceScreen from "./screens/BulkPriceScreen";
-
+import EventDeleteScreen from "./screens/EventDeleteScreen";
 
 export default function App() {
   return (
@@ -21,6 +21,8 @@ export default function App() {
       <EventEditScreen />
       {/* C03L08-03 Đổi Giá Vé Hàng Loạt Theo Nhà Tổ Chức Bằng JPQL UPDATE */}
       <BulkPriceScreen />
+      {/* C03L09-02 Xóa Sự Kiện Từ Ứng Dụng React Native Qua DELETE /api/events/{id} */}
+      <EventDeleteScreen />
       <CreateEventScreen />
       <BatchCreateEventsScreen />
     </ScrollView>
