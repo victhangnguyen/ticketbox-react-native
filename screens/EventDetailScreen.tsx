@@ -10,6 +10,8 @@ interface Event {
   eventName: string;
   organizerName: string;
   ticketPrice: number;
+  // C03L10-03: Cập nhật Địa điểm tổ chức trong interface Event
+  venue?: string | null; 
 }
 
 export default function EventDetailScreen() {
@@ -51,13 +53,14 @@ export default function EventDetailScreen() {
       />
       <Button title="Tra cuu" onPress={handleSearch} />
 
-      {message !== '' && <Text style={{ marginTop: 16, color: 'crimson' }}>{message}</Text>}
+      {message !== "" && <Text style={{ marginTop: 16, color: "crimson" }}>{message}</Text>}
 
       {event && (
         <View style={styles.result}>
           <Text style={styles.name}>{event.eventName}</Text>
           <Text>To chuc boi: {event.organizerName}</Text>
           <Text>Gia ve: {event.ticketPrice.toLocaleString()} VND</Text>
+          <Text>Dia diem: {event.venue ?? 'Chua cap nhat'}</Text>
         </View>
       )}
     </View>
