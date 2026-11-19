@@ -1,5 +1,6 @@
 // Path: App.js (TicketBox - React Native)
 import { ScrollView } from "react-native";
+import HttpInspectorScreen from "./screens/HttpInspectorScreen";
 import EventListScreen from "./screens/EventListScreen";
 import EventSearchScreen from "./screens/EventSearchScreen";
 import EventDetailScreen from "./screens/EventDetailScreen";
@@ -13,6 +14,8 @@ import BatchCreateEventsScreen from "./screens/BatchCreateEventsScreen";
 export default function App() {
   return (
     <ScrollView>
+      {/* C04L01-01: Đọc Từng Phần Của Một Yêu Cầu Và Phản Hồi GET Bằng REST Client */}
+      <HttpInspectorScreen />
       {/* C03L07-02 Danh Sách Sự Kiện Và Lọc Theo Nhà Tổ Chức Trên Ứng Dụng React Native */}
       <EventListScreen />
       {/* C03L07-03 Tìm Kiếm Sự Kiện Theo Từ Khóa Bằng LIKE Và OR */}
