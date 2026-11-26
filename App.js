@@ -1,5 +1,6 @@
 // Path: App.js (TicketBox - React Native)
 import { ScrollView } from "react-native";
+import EchoScreen from "./screens/EchoScreen";
 import HttpInspectorScreen from "./screens/HttpInspectorScreen";
 import EventListScreen from "./screens/EventListScreen";
 import EventSearchScreen from "./screens/EventSearchScreen";
@@ -14,6 +15,8 @@ import BatchCreateEventsScreen from "./screens/BatchCreateEventsScreen";
 export default function App() {
   return (
     <ScrollView>
+      {/* C04L02-03: Nhận Yêu Cầu POST Có Body JSON — Vì Sao Trình Duyệt Không Đủ */}
+      <EchoScreen />
       {/* C04L01-01: Đọc Từng Phần Của Một Yêu Cầu Và Phản Hồi GET Bằng REST Client */}
       <HttpInspectorScreen />
       {/* C03L07-02 Danh Sách Sự Kiện Và Lọc Theo Nhà Tổ Chức Trên Ứng Dụng React Native */}
